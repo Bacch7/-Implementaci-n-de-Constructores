@@ -1,0 +1,26 @@
+class Resource:
+    def __init__(self, name):
+        self.name = name
+        print(f'Resource {self.name} initialized.')
+
+    def operation(self):
+        print(f'Performing operation with {self.name}.')
+
+    def __del__(self):
+        print(f'Resource {self.name} destroyed.')
+
+# Ejemplo de uso
+def main():
+    # Creación de instancias de la clase Resource
+    resource1 = Resource('Resource 1')
+    resource2 = Resource('Resource 2')
+
+    # Llamada a método
+    resource1.operation()
+    resource2.operation()
+
+    # Python automáticamente destruirá las instancias al salir del alcance
+    # o se puede forzar la destrucción llamando a del objeto
+
+if __name__ == "__main__":
+    main()
